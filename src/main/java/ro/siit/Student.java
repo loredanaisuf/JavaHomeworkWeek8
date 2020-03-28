@@ -5,9 +5,9 @@ public class Student {
     private String lastName;
     private String dateOfBirth;
     private char gender;
-    private int id;
+    private String id;
 
-    public Student(String firstName, String lastName, String dateOfBirth, char gender, int id) {
+    public Student(String firstName, String lastName, String dateOfBirth, char gender, String id) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
@@ -15,22 +15,17 @@ public class Student {
         this.id = id;
     }
 
-    public int getId(){
+    public String getId(){
         return  id;
     }
 
-    public Integer getYear(String date){
-        String[] spitDate = date.split("/");
-        Integer year = 0;
-        for(int i = 0; i<spitDate.length; i++){
-            if(spitDate[i].length()==4)
-                year = Integer.parseInt(spitDate[i]);
-        }
-        return year;
-    }
 
     public String getDateOfBirth(){
         return dateOfBirth;
+    }
+
+    public String getLastName(){
+        return lastName;
     }
 
     @Override

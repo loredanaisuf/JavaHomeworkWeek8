@@ -17,35 +17,183 @@ public class AppTest
      * Rigorous Test :-)
      */
     @Test
+    public void testAddStudent1()
+    {
+        StudentsManagemet studentsManagemet = new StudentsManagemet();
+        try {
+            studentsManagemet.addStudent("Isuf", "Loredana", "12/08/1997", 'g', "1");
+            studentsManagemet.addStudent("Isuf", "Ionela", "12/08/1998", 'F', "2");
+        } catch (IllegalArgumentException iae){
+            System.out.println(iae.getMessage());
+        }
+
+        List <Student> testStudents = new ArrayList<>();
+        testStudents = studentsManagemet.listOfStudents();
+        assertEquals(0, testStudents.size(),0);
+    }
+
+    @Test
+    public void testAddStudent2()
+    {
+        StudentsManagemet studentsManagemet = new StudentsManagemet();
+        try {
+            studentsManagemet.addStudent("Isuf", "Loredana", "12/08/1997", 'm', "1");
+            studentsManagemet.addStudent("Isuf", null, "12/08/1998", 'f', "2");
+        } catch (IllegalArgumentException iae){
+            System.out.println(iae.getMessage());
+        }
+
+        List <Student> testStudents = new ArrayList<>();
+        testStudents = studentsManagemet.listOfStudents();
+        assertEquals(1, testStudents.size(),0);
+    }
+
+    @Test
+    public void testAddStudent3()
+    {
+        StudentsManagemet studentsManagemet = new StudentsManagemet();
+        try {
+            studentsManagemet.addStudent("", "Loredana", "12/08/1997", 'F', "1");
+            studentsManagemet.addStudent("Isuf", "Ionela", "12/08/1998", 'F', "2");
+        } catch (IllegalArgumentException iae){
+            System.out.println(iae.getMessage());
+        }
+
+        List <Student> testStudents = new ArrayList<>();
+        testStudents = studentsManagemet.listOfStudents();
+        assertEquals(0, testStudents.size(),0);
+    }
+
+    @Test
+    public void testAddStudent4()
+    {
+        StudentsManagemet studentsManagemet = new StudentsManagemet();
+        try {
+            studentsManagemet.addStudent("Isuf", "Loredana", "12/08/1800", 'F', "1");
+        } catch (IllegalArgumentException iae){
+            System.out.println(iae.getMessage());
+        }
+
+        List <Student> testStudents = new ArrayList<>();
+        testStudents = studentsManagemet.listOfStudents();
+        assertEquals(0, testStudents.size(),0);
+    }
+    @Test
     public void testAddStudent()
     {
         StudentsManagemet studentsManagemet = new StudentsManagemet();
-        studentsManagemet.addStudent("Isuf", "Loredana", "12/08/1997", 'F', 1);
-        studentsManagemet.addStudent("Isuf", "Ionela", "12/08/1998", 'F', 2);
+        try {
+            studentsManagemet.addStudent("Isuf", "Loredana", "12/08/1997", 'F', "1");
+            studentsManagemet.addStudent("Isuf", "Ionela", "12/08/1950", 'F', "1");
+        } catch (IllegalArgumentException iae){
+            System.out.println(iae.getMessage());
+        }
+
         List <Student> testStudents = new ArrayList<>();
         testStudents = studentsManagemet.listOfStudents();
         assertEquals(2, testStudents.size(),0);
     }
 
     @Test
+    public void testRetrieveStudent1()
+    {
+        StudentsManagemet studentsManagemet = new StudentsManagemet();
+        List <Student> testStudents = new ArrayList<>();
+        try{
+            studentsManagemet.addStudent("Isuf", "Loredana", "12/08/1997", 'F', "1");
+            studentsManagemet.addStudent("Isuf", "Ionela", "12/08/1998", 'F', "2");
+            testStudents = studentsManagemet.retrieveStudents(-23);
+        } catch(IllegalArgumentException iae){
+            System.out.println(iae.getMessage());
+        }
+
+        assertEquals(0, testStudents.size(),0);
+    }
+
+    @Test
     public void testRetrieveStudent()
     {
         StudentsManagemet studentsManagemet = new StudentsManagemet();
-        studentsManagemet.addStudent("Isuf", "Loredana", "12/08/1997", 'F', 1);
-        studentsManagemet.addStudent("Isuf", "Ionela", "12/08/1998", 'F', 2);
         List <Student> testStudents = new ArrayList<>();
-        testStudents = studentsManagemet.retrieveStudents(23);
+        try{
+            studentsManagemet.addStudent("Isuf", "Loredana", "12/08/1997", 'F', "1");
+            studentsManagemet.addStudent("Isuf", "Ionela", "12/08/1998", 'F', "2");
+            testStudents = studentsManagemet.retrieveStudents(23);
+        } catch(IllegalArgumentException iae){
+            System.out.println(iae.getMessage());
+        }
+
         assertEquals(1, testStudents.size(),0);
+    }
+
+    @Test
+    public void testDeleteStudent1()
+    {
+        StudentsManagemet studentsManagemet = new StudentsManagemet();
+        studentsManagemet.addStudent("Isuf", "Loredana", "12/08/1997", 'F', "1");
+        studentsManagemet.addStudent("Isuf", "Ionela", "12/08/1998", 'F', "2");
+        List <Student> testStudents;
+        try {
+            studentsManagemet.deleteStudent(null);
+            testStudents = new ArrayList<>();
+        } catch (IllegalArgumentException iae){
+            System.out.println(iae.getMessage());
+        }
+
+        testStudents = studentsManagemet.listOfStudents();
+        assertEquals(2, testStudents.size(),0);
+    }
+
+    @Test
+    public void testDeleteStudent2()
+    {
+        StudentsManagemet studentsManagemet = new StudentsManagemet();
+        studentsManagemet.addStudent("Isuf", "Loredana", "12/08/1997", 'F', "1");
+        studentsManagemet.addStudent("Isuf", "Ionela", "12/08/1998", 'F', "2");
+        List <Student> testStudents;
+        try {
+            studentsManagemet.deleteStudent("");
+            testStudents = new ArrayList<>();
+        } catch (IllegalArgumentException iae){
+            System.out.println(iae.getMessage());
+        }
+
+        testStudents = studentsManagemet.listOfStudents();
+        assertEquals(2, testStudents.size(),0);
+    }
+
+    @Test
+    public void testDeleteStudent3()
+    {
+        StudentsManagemet studentsManagemet = new StudentsManagemet();
+        studentsManagemet.addStudent("Isuf", "Loredana", "12/08/1997", 'F', "1");
+        studentsManagemet.addStudent("Isuf", "Ionela", "12/08/1998", 'F', "2");
+        List <Student> testStudents;
+        try {
+            studentsManagemet.deleteStudent("3");
+            testStudents = new ArrayList<>();
+        } catch (IllegalArgumentException iae){
+            System.out.println(iae.getMessage());
+        }
+
+        testStudents = studentsManagemet.listOfStudents();
+        assertEquals(2, testStudents.size(),0);
     }
 
     @Test
     public void testDeleteStudent()
     {
         StudentsManagemet studentsManagemet = new StudentsManagemet();
-        studentsManagemet.addStudent("Isuf", "Loredana", "12/08/1997", 'F', 1);
-        studentsManagemet.addStudent("Isuf", "Ionela", "12/08/1998", 'F', 2);
-        studentsManagemet.deleteStudent(1);
-        List <Student> testStudents = new ArrayList<>();
+        studentsManagemet.addStudent("Isuf", "Loredana", "12/08/1997", 'F', "1");
+        studentsManagemet.addStudent("Isuf", "Ionela", "12/08/1998", 'F', "2");
+        List <Student> testStudents;
+        try {
+            studentsManagemet.deleteStudent("1");
+            testStudents = new ArrayList<>();
+        } catch (IllegalArgumentException iae){
+            System.out.println(iae.getMessage());
+        }
+
         testStudents = studentsManagemet.listOfStudents();
         assertEquals(1, testStudents.size(),0);
     }
