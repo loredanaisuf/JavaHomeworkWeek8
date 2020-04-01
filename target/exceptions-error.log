@@ -1,0 +1,17 @@
+01/Apr/2020 22:32:15,948- : first name should not be empty
+01/Apr/2020 22:45:18,274- : The id shouldn't be empty 
+01/Apr/2020 22:45:18,280- : The id shouldn't be empty 
+01/Apr/2020 22:45:18,284- : last name should not be empty
+01/Apr/2020 22:45:18,285- : last name should not be empty
+01/Apr/2020 22:45:18,286- : first name should not be empty
+01/Apr/2020 22:45:18,288- : date of birth between 1900 and current year - 18 
+01/Apr/2020 22:47:54,593- : age should be greater than 0
+01/Apr/2020 22:47:54,598- : age is not a number 
+01/Apr/2020 22:47:54,599- : The id shouldn't be empty 
+01/Apr/2020 22:47:54,602- : The id shouldn't be empty 
+01/Apr/2020 22:47:54,603- : The student with this id doesn't exist 
+01/Apr/2020 22:47:54,606- : last name should not be empty
+01/Apr/2020 22:47:54,606- : last name should not be empty
+01/Apr/2020 22:47:54,607- : first name should not be empty
+01/Apr/2020 22:47:54,608- : date of birth between 1900 and current year - 18 
+01/Apr/2020 22:47:54,609- : The function argument must be "lastname" or "birthdate"

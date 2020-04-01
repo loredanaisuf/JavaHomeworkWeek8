@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ro.siit.AppTest" time="0.05" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ro.siit.AppTest" time="0.108" tests="15" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\Loredana Isuf\Documents\GitHub\JavaHomeworkWeek8\target\test-classes;C:\Users\Loredana Isuf\Documents\GitHub\JavaHomeworkWeek8\target\classes;C:\Users\Loredana Isuf\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Loredana Isuf\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.class.path" value="C:\Users\Loredana Isuf\Documents\GitHub\JavaHomeworkWeek8\target\test-classes;C:\Users\Loredana Isuf\Documents\GitHub\JavaHomeworkWeek8\target\classes;C:\Users\Loredana Isuf\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Loredana Isuf\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Loredana Isuf\.m2\repository\org\apache\logging\log4j\log4j-core\2.13.1\log4j-core-2.13.1.jar;C:\Users\Loredana Isuf\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.1\log4j-api-2.13.1.jar;"/>
     <property name="java.vm.vendor" value="JetBrains s.r.o"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -17,9 +17,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.4\jbr\bin"/>
-    <property name="sun.java.command" value="C:\Users\LOREDA~1\AppData\Local\Temp\surefire9832403139275649325\surefirebooter2158772491957096354.jar C:\Users\Loredana Isuf\AppData\Local\Temp\surefire9832403139275649325 2020-03-27T22-35-53_099-jvmRun1 surefire14780799672612213520tmp surefire_06433726143764608184tmp"/>
+    <property name="sun.java.command" value="C:\Users\LOREDA~1\AppData\Local\Temp\surefire6427494973840855364\surefirebooter2826003089562374143.jar C:\Users\Loredana Isuf\AppData\Local\Temp\surefire6427494973840855364 2020-03-31T19-50-17_950-jvmRun1 surefire10481589272677912873tmp surefire_010919962534683077510tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\Loredana Isuf\Documents\GitHub\JavaHomeworkWeek8\target\test-classes;C:\Users\Loredana Isuf\Documents\GitHub\JavaHomeworkWeek8\target\classes;C:\Users\Loredana Isuf\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Loredana Isuf\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\Loredana Isuf\Documents\GitHub\JavaHomeworkWeek8\target\test-classes;C:\Users\Loredana Isuf\Documents\GitHub\JavaHomeworkWeek8\target\classes;C:\Users\Loredana Isuf\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Loredana Isuf\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Loredana Isuf\.m2\repository\org\apache\logging\log4j\log4j-core\2.13.1\log4j-core-2.13.1.jar;C:\Users\Loredana Isuf\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.1\log4j-api-2.13.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Loredana Isuf"/>
     <property name="user.language" value="en"/>
@@ -34,7 +34,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\LOREDA~1\AppData\Local\Temp\surefire9832403139275649325\surefirebooter2158772491957096354.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\LOREDA~1\AppData\Local\Temp\surefire6427494973840855364\surefirebooter2826003089562374143.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.4+10-b304.77"/>
@@ -60,5 +60,19 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="ro.siit.AppTest" time="0.002"/>
+  <testcase name="testRetrieveStudent1" classname="ro.siit.AppTest" time="0.011"/>
+  <testcase name="testRetrieveStudent2" classname="ro.siit.AppTest" time="0"/>
+  <testcase name="testDeleteStudent1" classname="ro.siit.AppTest" time="0"/>
+  <testcase name="testDeleteStudent2" classname="ro.siit.AppTest" time="0.001"/>
+  <testcase name="testDeleteStudent3" classname="ro.siit.AppTest" time="0"/>
+  <testcase name="testAddStudent" classname="ro.siit.AppTest" time="0.003"/>
+  <testcase name="testDeleteStudent" classname="ro.siit.AppTest" time="0.001"/>
+  <testcase name="testAddStudent1" classname="ro.siit.AppTest" time="0.002"/>
+  <testcase name="testAddStudent2" classname="ro.siit.AppTest" time="0.001"/>
+  <testcase name="testAddStudent3" classname="ro.siit.AppTest" time="0.001"/>
+  <testcase name="testAddStudent4" classname="ro.siit.AppTest" time="0.001"/>
+  <testcase name="testRetrieveStudent" classname="ro.siit.AppTest" time="0"/>
+  <testcase name="testListStudentsOrdered1" classname="ro.siit.AppTest" time="0.004"/>
+  <testcase name="testListStudentsOrdered2" classname="ro.siit.AppTest" time="0.002"/>
+  <testcase name="testListStudentsOrdered3" classname="ro.siit.AppTest" time="0.002"/>
 </testsuite>
